@@ -1,0 +1,236 @@
+.hero-banner{
+  background-color: black;
+  .swiper{
+    .swiper-slide{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.avtar{
+  width: 40px;
+  height: 40px;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dropdown-toggle{
+  &::after{
+    display: none;
+  }
+  border: none !important;
+}
+
+.dropdown-menu{
+  top: 60px !important;
+  border: 0px;
+  &:after{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color:transparent transparent white transparent;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+  }
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.contactus{
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  position: fixed;
+  bottom: 50px;
+  right:30px;
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+#loginModal{
+  &.modal.fade .modal-dialog{
+    transform: translate(500px,-500px) scale(0);
+  }
+  &.modal.show .modal-dialog{
+    transform: translate(0px,0px) scale(1);
+  }
+}
+#contactUsModal{
+  z-index: 9999;
+  .modal-dialog{
+    bottom: -28px;
+    right: 100px;
+    position: fixed;
+    margin: 0px;
+    width: 400px;
+    @media (max-width:599px) {
+      top: 0px !important;
+      left: 0px;
+      bottom: 0px;
+      width: 100%;
+    }
+
+    .modal-body{
+      height: 400px;
+      overflow: auto;
+      @media (max-width:599px) {
+        height: calc(100vh - 136px) !important;
+      }
+
+      ul{
+        list-style: none;
+
+        li{
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 15px;
+
+          &.my-message{
+            justify-content: end;
+          }
+          &.user-message{
+            justify-content: start;
+
+            .message{
+              order: 2;
+
+              &::after{
+                left: -17px;
+                border-color: transparent skyblue transparent transparent;
+                right: inherit;
+              }
+
+              .float-start{
+                float: right !important;
+              }
+            }
+
+            .ms-2{
+              margin-left: 0px;
+              margin-right: 10px;
+            }
+          }
+
+          .avatar{
+            width: 50px;
+            height: 50px;
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            font-size: 23px;
+          }
+        }
+        .message{
+          background-color: skyblue;
+          padding: 10px;
+          width: 60%;
+          text-align: left;
+          border-radius: 10px;
+          position: relative;
+
+          &::after{
+            content: "";
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent skyblue;
+            position: absolute;
+            bottom: 10px;
+            right: -17px;
+          }
+        }
+      }
+    }
+  }
+
+  &.modal.fade .modal-dialog{
+    transform: translate(300px,400px) scale(0);
+  }
+
+  &.modal.show .modal-dialog{
+    transform: translate(0px,0px) scale(1);
+  }
+}
+
+.recommended,#popular{
+  h2{
+    @media (max-width:599px) {
+      font-size: 16px;
+    }
+  }
+  .row{
+    &::-webkit-scrollbar {
+      height: 0px;
+    }
+  }
+
+  .card{
+    transition: transform 0.3s;
+    overflow: hidden;
+    &:hover{
+      transform: translateY(-10px);
+    }
+  }
+}
+
+#admin{
+  ul{
+    list-style: none;
+
+    li{
+      border-bottom: 1px solid gray;
+      padding: 10px 0px;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.loader{
+  position: fixed;
+  z-index: 99999;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer{
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.col-lg-2-5{
+  @media (min-width:992px) {
+    width: 24%;
+  }
+}
+
+#category{
+  .row{
+    &::-webkit-scrollbar{
+      width: 0px;
+    }
+  }
+  .card{
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+}
